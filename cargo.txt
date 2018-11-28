@@ -1,0 +1,14 @@
+cargo new projname --bin (for cmd application) --vcs none (for disable git)
+cargo build (for compiling project)
+cargo run (for run program)
+cargo built --release (for build with all optimizations)
+    cargo new --lib my_library (for builb library_file.rs) with default templ: {
+        #[cfg(test)]
+        mod tests {
+            #[test]
+            fn it_works() {
+                assert_eq!(2 + 2, 4);
+            }
+        }
+
+    }
