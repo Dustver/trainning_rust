@@ -24,9 +24,14 @@ struct Rectangle {
     width: u32,
 }
 
-fn area(rectangle: &Rectangle) -> u32 {
-    rectangle.width * rectangle.length
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.length
+    }
 }
+// fn area(rectangle: &Rectangle) -> u32 {
+//     rectangle.width * rectangle.length
+// }
 
 fn main() {
     // let rect1 = &(Rectangle { length: 50, width: 30 });
@@ -34,5 +39,5 @@ fn main() {
     let rect1 = Rectangle {length: 30, width: 50};
     println!("Rectangle #1 is {:?}", rect1);
     println!("Rectangle #1 in better view is {:#?}", rect1);
-    println!("Area of rectangle is {} square pixels", area(&rect1));
+    println!("Area of rectangle is {} square pixels", rect1.area());
 }
